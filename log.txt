@@ -1,0 +1,118 @@
+1..for a start use cProfile on the quicktrain examples for a general overview 
+2..Then there are a variety of tools that i can use for testing each aspect i want (there are ones that track memory usage..ones that track cpu..ones for production..etc)
+	line_profiler.. more detailed but with the cost of more overhead 	
+	for memory use -->memory profiler--> it adds a lot of overhead better use it on certain functions not on the whole code 		 
+	py-spy,intel Tiber ==> production 
+	
+	before diving into using all of these above .. you might want to check if better alternatives exist 
+	
+	
+
+ python new version 
+	what might be interesting to look into 
+	PEP 799: A dedicated profiling package for organizing Python profiling tools
+	PEP 799: Tachyon: High frequency statistical sampling profiler	--> this might be actaully pretty good
+
+-->a start is to do profiling with a different set of params(of Declearn) 
+
+->USE THE decLearn Logging first 
+
+##QUESTIONS
+-what do i use as refference of a more relative interpretaion ?--> because some execution are dependant of type of data maybe ? or some thing else but i know that they are not absolute so i need to know how to handle this 
+	--Must establish benchmark(s) for it to be a baseline 
+	--the benchmarks must use a contolled experimentation approach .. varying one Thing at a time .. and knowing whats slow across all params and whats dependant
+
+--do i need to do profiling for comparing the past versions JUST IN CASE there is a regression that might have happened ? 
+
+##TO LOOK UP 
+--what is difference between profiling in prod/local ?
+--how to integrate something to the ci pipeline  ?
+
+##TO DO
+-identify the suitable type of profiling or tool for each area/module of declearn  and eventually how to profile the ENSEMBLE (must a fine a way to combine the tools ) 
+-more tools you try around more you found out xd 
+-build something that turns raw profiling output into something visibally interpretable 
+-till now i undrestood that for a different combination of usage of profiling tools..what the results might give can differ .. i have to figure out some kind of a strucutre or architecture that would give the most insights.. considering there is no profiling just yet the overhead is not a problem for now i need most the info i cant get ..but later i will consider a more moderate approach once its going to the ci pipeline !!  
+
+
+
+
+
+##INSIGHTS
+--Gpu wrapper called 800k times even when there is no gpu present ??
+--decLearn code is only about 15% of the total time 
+
+
+STRATEGY 
+
+Top level (function level) : cProfiler 
+	training module 
+		inside the functions-->line_profiler (time)
+		tf/torch lines-> tp.profiler/torch.profiler
+	model+aggregator+dataset?-->memory_profiler
+	communication module-->The DecLaean log output already has timestamps for all and per/round it will guide me directly where to aim 
+	secagg-->line profiler/memory profiler -->get info about how time/memory much the encryption consumes
+	
+==> the goal of using or not using optionalities like secAgg for example is not to compare its to be able to test things that are not even present when they are off  
+CONFIG TOML TO BUILD DIFFERENT BENCHMARKS FROM THE MNIST EXAMPL 
+
+the config variations of the quick run are good to know if the system overall got slower or not...and the modular benchmarks to inspect ..(don't have enough knowledge about declearn yet to be able to code them ) 
+	
+	
+#####OVER ALL VIEW 
+prepare benchmark examples (with different set of selections to cover all areas of decLearn) 
+extract profiling info for the benchmark
+	now i am here because i need to get familiar with the profiling tools.. and then i will build a set of profiling intels
+	don't forget to use the LOGG
+===> after an update/change compare the profiling and extract what progressed and what regressed 
+     the comparison has to be fast because it will integrate to CI 
+     
+
+
+
+
+------------------------------------------------------------------------------------------CHECKPOINT-------------------------------------------------------------------------------------------------------------
+##TASKS 
+--trying out tachyon 
+--Getting familiar with each module of declearn code 
+--start documenting eveything you're doing to leave everything clear behind you (make sure its clean at the end of each checkpoint)
+ 
+
+### INFORMATION ABOUT Tachyon ###
+--async awareness can help track and differentiate between clients 
+--it supports both wall clock mode and cpu mode which is very very useful for declearn 
+--
+
+##Questions 
+--difference between normal and -e in the profiling context ?
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+	
