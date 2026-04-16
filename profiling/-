@@ -1,0 +1,122 @@
+{
+  "total_num_allocations": 17339727,
+  "total_bytes_allocated": 70710510209,
+  "allocation_size_histogram": [
+    {
+      "min_bytes": 0,
+      "max_bytes": 4,
+      "count": 91075
+    },
+    {
+      "min_bytes": 5,
+      "max_bytes": 33,
+      "count": 9556455
+    },
+    {
+      "min_bytes": 34,
+      "max_bytes": 203,
+      "count": 5421441
+    },
+    {
+      "min_bytes": 204,
+      "max_bytes": 1201,
+      "count": 1543657
+    },
+    {
+      "min_bytes": 1202,
+      "max_bytes": 7082,
+      "count": 139353
+    },
+    {
+      "min_bytes": 7083,
+      "max_bytes": 41714,
+      "count": 498830
+    },
+    {
+      "min_bytes": 41715,
+      "max_bytes": 245666,
+      "count": 34036
+    },
+    {
+      "min_bytes": 245667,
+      "max_bytes": 1446760,
+      "count": 52129
+    },
+    {
+      "min_bytes": 1446761,
+      "max_bytes": 8520133,
+      "count": 746
+    },
+    {
+      "min_bytes": 8520134,
+      "max_bytes": 50176000,
+      "count": 2005
+    }
+  ],
+  "allocator_type_distribution": {
+    "MALLOC": 16567505,
+    "POSIX_MEMALIGN": 647399,
+    "REALLOC": 60401,
+    "CALLOC": 46301,
+    "MMAP": 15675,
+    "ALIGNED_ALLOC": 2446
+  },
+  "top_allocations_by_size": [
+    {
+      "location": "<stack trace unavailable>",
+      "size": 54473189511
+    },
+    {
+      "location": "mul:/home/fslimani/.venvs/declearn311/lib/python3.11/site-packages/tensorflow/python/ops/gen_math_ops.py:6830",
+      "size": 4439950357
+    },
+    {
+      "location": "add_v2:/home/fslimani/.venvs/declearn311/lib/python3.11/site-packages/tensorflow/python/ops/gen_math_ops.py:477",
+      "size": 2221879686
+    },
+    {
+      "location": "real_div:/home/fslimani/.venvs/declearn311/lib/python3.11/site-packages/tensorflow/python/ops/gen_math_ops.py:8168",
+      "size": 2220202616
+    },
+    {
+      "location": "quick_execute:/home/fslimani/.venvs/declearn311/lib/python3.11/site-packages/tensorflow/python/eager/execute.py:53",
+      "size": 1308710035
+    }
+  ],
+  "top_allocations_by_count": [
+    {
+      "location": "mul:/home/fslimani/.venvs/declearn311/lib/python3.11/site-packages/tensorflow/python/ops/gen_math_ops.py:6830",
+      "count": 2948838
+    },
+    {
+      "location": "real_div:/home/fslimani/.venvs/declearn311/lib/python3.11/site-packages/tensorflow/python/ops/gen_math_ops.py:8168",
+      "count": 1495100
+    },
+    {
+      "location": "add_v2:/home/fslimani/.venvs/declearn311/lib/python3.11/site-packages/tensorflow/python/ops/gen_math_ops.py:477",
+      "count": 1478224
+    },
+    {
+      "location": "<stack trace unavailable>",
+      "count": 1463791
+    },
+    {
+      "location": "quick_execute:/home/fslimani/.venvs/declearn311/lib/python3.11/site-packages/tensorflow/python/eager/execute.py:53",
+      "count": 995987
+    }
+  ],
+  "metadata": {
+    "start_time": "2026-04-15 15:31:55.271000+02:00",
+    "end_time": "2026-04-15 15:32:57.257000+02:00",
+    "total_allocations": 34454546,
+    "total_frames": 0,
+    "peak_memory": 545232548,
+    "command_line": "/home/fslimani/.venvs/declearn311/bin/memray run --force -o profiling/results/config_2026-04-15_15-29/memray.bin profiling/quickrun_runner.py examples/mnist_quickrun/config.toml",
+    "pid": 102937,
+    "main_thread_id": 1,
+    "python_allocator": "pymalloc",
+    "has_native_traces": false,
+    "trace_python_allocators": false,
+    "file_format": 0
+  }
+}

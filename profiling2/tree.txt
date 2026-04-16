@@ -1,0 +1,1135 @@
+.
+├── AUTHORS
+├── ci
+│   └── Dockerfile
+├── declearn
+│   ├── aggregator
+│   │   ├── _api.py
+│   │   ├── _avg.py
+│   │   ├── _gma.py
+│   │   ├── __init__.py
+│   │   ├── __pycache__
+│   │   │   ├── _api.cpython-310.pyc
+│   │   │   ├── _api.cpython-311.pyc
+│   │   │   ├── _avg.cpython-311.pyc
+│   │   │   ├── _gma.cpython-311.pyc
+│   │   │   ├── __init__.cpython-310.pyc
+│   │   │   ├── __init__.cpython-311.pyc
+│   │   │   └── _sum.cpython-311.pyc
+│   │   └── _sum.py
+│   ├── client_sampler
+│   │   ├── _api.py
+│   │   ├── _composition.py
+│   │   ├── _config.py
+│   │   ├── criterion
+│   │   │   ├── _api.py
+│   │   │   ├── _criteria.py
+│   │   │   ├── __init__.py
+│   │   │   └── __pycache__
+│   │   │       ├── _api.cpython-311.pyc
+│   │   │       ├── _criteria.cpython-311.pyc
+│   │   │       └── __init__.cpython-311.pyc
+│   │   ├── _criterion_sampler.py
+│   │   ├── _default.py
+│   │   ├── __init__.py
+│   │   ├── __pycache__
+│   │   │   ├── _api.cpython-311.pyc
+│   │   │   ├── _composition.cpython-311.pyc
+│   │   │   ├── _config.cpython-311.pyc
+│   │   │   ├── _criterion_sampler.cpython-311.pyc
+│   │   │   ├── _default.cpython-311.pyc
+│   │   │   ├── __init__.cpython-311.pyc
+│   │   │   ├── _uniform.cpython-311.pyc
+│   │   │   └── _weighted.cpython-311.pyc
+│   │   ├── _uniform.py
+│   │   └── _weighted.py
+│   ├── communication
+│   │   ├── api
+│   │   │   ├── backend
+│   │   │   │   ├── actions.py
+│   │   │   │   ├── flags.py
+│   │   │   │   ├── _handler.py
+│   │   │   │   ├── __init__.py
+│   │   │   │   └── __pycache__
+│   │   │   │       ├── actions.cpython-311.pyc
+│   │   │   │       ├── flags.cpython-311.pyc
+│   │   │   │       ├── _handler.cpython-311.pyc
+│   │   │   │       └── __init__.cpython-311.pyc
+│   │   │   ├── _client.py
+│   │   │   ├── __init__.py
+│   │   │   ├── __pycache__
+│   │   │   │   ├── _client.cpython-311.pyc
+│   │   │   │   ├── __init__.cpython-311.pyc
+│   │   │   │   └── _server.cpython-311.pyc
+│   │   │   └── _server.py
+│   │   ├── grpc
+│   │   │   ├── _client.py
+│   │   │   ├── __init__.py
+│   │   │   ├── protobufs
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── message_pb2_grpc.py
+│   │   │   │   ├── message_pb2.py
+│   │   │   │   ├── message.proto
+│   │   │   │   └── __pycache__
+│   │   │   │       ├── __init__.cpython-311.pyc
+│   │   │   │       ├── message_pb2.cpython-311.pyc
+│   │   │   │       └── message_pb2_grpc.cpython-311.pyc
+│   │   │   ├── __pycache__
+│   │   │   │   ├── _client.cpython-311.pyc
+│   │   │   │   ├── __init__.cpython-311.pyc
+│   │   │   │   └── _server.cpython-311.pyc
+│   │   │   └── _server.py
+│   │   ├── __init__.py
+│   │   ├── __pycache__
+│   │   │   └── __init__.cpython-311.pyc
+│   │   ├── utils
+│   │   │   ├── _build.py
+│   │   │   ├── __init__.py
+│   │   │   ├── _parse.py
+│   │   │   └── __pycache__
+│   │   │       ├── _build.cpython-311.pyc
+│   │   │       ├── __init__.cpython-311.pyc
+│   │   │       └── _parse.cpython-311.pyc
+│   │   └── websockets
+│   │       ├── _client.py
+│   │       ├── __init__.py
+│   │       ├── __pycache__
+│   │       │   ├── _client.cpython-311.pyc
+│   │       │   ├── __init__.cpython-311.pyc
+│   │       │   ├── _server.cpython-311.pyc
+│   │       │   └── _tools.cpython-311.pyc
+│   │       ├── _server.py
+│   │       └── _tools.py
+│   ├── data_info
+│   │   ├── _base.py
+│   │   ├── _fields.py
+│   │   ├── __init__.py
+│   │   └── __pycache__
+│   │       ├── _base.cpython-311.pyc
+│   │       ├── _fields.cpython-311.pyc
+│   │       └── __init__.cpython-311.pyc
+│   ├── dataset
+│   │   ├── _base.py
+│   │   ├── examples
+│   │   │   ├── _heart_uci.py
+│   │   │   ├── __init__.py
+│   │   │   ├── _mnist.py
+│   │   │   └── __pycache__
+│   │   │       ├── _heart_uci.cpython-311.pyc
+│   │   │       ├── __init__.cpython-311.pyc
+│   │   │       └── _mnist.cpython-311.pyc
+│   │   ├── __init__.py
+│   │   ├── _inmemory.py
+│   │   ├── __pycache__
+│   │   │   ├── _base.cpython-311.pyc
+│   │   │   ├── __init__.cpython-311.pyc
+│   │   │   ├── _inmemory.cpython-311.pyc
+│   │   │   └── _split_data.cpython-311.pyc
+│   │   ├── _split_data.py
+│   │   ├── tensorflow
+│   │   │   ├── __init__.py
+│   │   │   └── _tensorflow.py
+│   │   ├── torch
+│   │   │   ├── __init__.py
+│   │   │   ├── _torch.py
+│   │   │   └── _utils.py
+│   │   └── utils
+│   │       ├── __init__.py
+│   │       ├── __pycache__
+│   │       │   ├── __init__.cpython-311.pyc
+│   │       │   ├── _save_load.cpython-311.pyc
+│   │       │   ├── _sparse.cpython-311.pyc
+│   │       │   └── _split_classif.cpython-311.pyc
+│   │       ├── _save_load.py
+│   │       ├── _sparse.py
+│   │       └── _split_classif.py
+│   ├── fairness
+│   │   ├── api
+│   │   │   ├── _client.py
+│   │   │   ├── _dataset.py
+│   │   │   ├── _fair_func.py
+│   │   │   ├── __init__.py
+│   │   │   ├── _metrics.py
+│   │   │   ├── __pycache__
+│   │   │   │   ├── _client.cpython-311.pyc
+│   │   │   │   ├── _dataset.cpython-311.pyc
+│   │   │   │   ├── _fair_func.cpython-311.pyc
+│   │   │   │   ├── __init__.cpython-311.pyc
+│   │   │   │   ├── _metrics.cpython-311.pyc
+│   │   │   │   └── _server.cpython-311.pyc
+│   │   │   └── _server.py
+│   │   ├── core
+│   │   │   ├── _functions.py
+│   │   │   ├── __init__.py
+│   │   │   ├── _inmemory.py
+│   │   │   └── __pycache__
+│   │   │       ├── _functions.cpython-311.pyc
+│   │   │       ├── __init__.cpython-311.pyc
+│   │   │       └── _inmemory.cpython-311.pyc
+│   │   ├── fairbatch
+│   │   │   ├── _client.py
+│   │   │   ├── _dataset.py
+│   │   │   ├── _fedfb.py
+│   │   │   ├── __init__.py
+│   │   │   ├── _messages.py
+│   │   │   ├── __pycache__
+│   │   │   │   ├── _client.cpython-311.pyc
+│   │   │   │   ├── _dataset.cpython-311.pyc
+│   │   │   │   ├── _fedfb.cpython-311.pyc
+│   │   │   │   ├── __init__.cpython-311.pyc
+│   │   │   │   ├── _messages.cpython-311.pyc
+│   │   │   │   ├── _sampling.cpython-311.pyc
+│   │   │   │   └── _server.cpython-311.pyc
+│   │   │   ├── _sampling.py
+│   │   │   └── _server.py
+│   │   ├── fairfed
+│   │   │   ├── _aggregator.py
+│   │   │   ├── _client.py
+│   │   │   ├── _fairfed.py
+│   │   │   ├── __init__.py
+│   │   │   ├── _messages.py
+│   │   │   ├── __pycache__
+│   │   │   │   ├── _aggregator.cpython-311.pyc
+│   │   │   │   ├── _client.cpython-311.pyc
+│   │   │   │   ├── _fairfed.cpython-311.pyc
+│   │   │   │   ├── __init__.cpython-311.pyc
+│   │   │   │   ├── _messages.cpython-311.pyc
+│   │   │   │   └── _server.cpython-311.pyc
+│   │   │   └── _server.py
+│   │   ├── fairgrad
+│   │   │   ├── _client.py
+│   │   │   ├── __init__.py
+│   │   │   ├── _messages.py
+│   │   │   ├── __pycache__
+│   │   │   │   ├── _client.cpython-311.pyc
+│   │   │   │   ├── __init__.cpython-311.pyc
+│   │   │   │   ├── _messages.cpython-311.pyc
+│   │   │   │   └── _server.cpython-311.pyc
+│   │   │   └── _server.py
+│   │   ├── __init__.py
+│   │   ├── monitor
+│   │   │   ├── _client.py
+│   │   │   ├── __init__.py
+│   │   │   ├── __pycache__
+│   │   │   │   ├── _client.cpython-311.pyc
+│   │   │   │   ├── __init__.cpython-311.pyc
+│   │   │   │   └── _server.cpython-311.pyc
+│   │   │   └── _server.py
+│   │   └── __pycache__
+│   │       └── __init__.cpython-311.pyc
+│   ├── __init__.py
+│   ├── main
+│   │   ├── _client.py
+│   │   ├── config
+│   │   │   ├── _dataclasses.py
+│   │   │   ├── __init__.py
+│   │   │   ├── __pycache__
+│   │   │   │   ├── _dataclasses.cpython-311.pyc
+│   │   │   │   ├── __init__.cpython-311.pyc
+│   │   │   │   ├── _run_config.cpython-311.pyc
+│   │   │   │   └── _strategy.cpython-311.pyc
+│   │   │   ├── _run_config.py
+│   │   │   └── _strategy.py
+│   │   ├── __init__.py
+│   │   ├── __pycache__
+│   │   │   ├── _client.cpython-311.pyc
+│   │   │   ├── __init__.cpython-311.pyc
+│   │   │   └── _server.cpython-311.pyc
+│   │   ├── _server.py
+│   │   └── utils
+│   │       ├── _checkpoint.py
+│   │       ├── _data_info.py
+│   │       ├── _early_stop.py
+│   │       ├── _error.py
+│   │       ├── __init__.py
+│   │       └── __pycache__
+│   │           ├── _checkpoint.cpython-311.pyc
+│   │           ├── _data_info.cpython-311.pyc
+│   │           ├── _early_stop.cpython-311.pyc
+│   │           ├── _error.cpython-311.pyc
+│   │           └── __init__.cpython-311.pyc
+│   ├── messaging
+│   │   ├── _api.py
+│   │   ├── _base.py
+│   │   ├── _fairness.py
+│   │   ├── __init__.py
+│   │   └── __pycache__
+│   │       ├── _api.cpython-311.pyc
+│   │       ├── _base.cpython-311.pyc
+│   │       ├── _fairness.cpython-311.pyc
+│   │       └── __init__.cpython-311.pyc
+│   ├── metrics
+│   │   ├── _api.py
+│   │   ├── _classif.py
+│   │   ├── __init__.py
+│   │   ├── _mean.py
+│   │   ├── __pycache__
+│   │   │   ├── _api.cpython-311.pyc
+│   │   │   ├── _classif.cpython-311.pyc
+│   │   │   ├── __init__.cpython-311.pyc
+│   │   │   ├── _mean.cpython-311.pyc
+│   │   │   ├── _roc_auc.cpython-311.pyc
+│   │   │   ├── _rsquared.cpython-311.pyc
+│   │   │   ├── _utils.cpython-311.pyc
+│   │   │   └── _wrapper.cpython-311.pyc
+│   │   ├── _roc_auc.py
+│   │   ├── _rsquared.py
+│   │   ├── _utils.py
+│   │   └── _wrapper.py
+│   ├── model
+│   │   ├── api
+│   │   │   ├── __init__.py
+│   │   │   ├── _model.py
+│   │   │   ├── __pycache__
+│   │   │   │   ├── __init__.cpython-311.pyc
+│   │   │   │   ├── _model.cpython-311.pyc
+│   │   │   │   └── _vector.cpython-311.pyc
+│   │   │   └── _vector.py
+│   │   ├── haiku
+│   │   │   ├── __init__.py
+│   │   │   ├── _model.py
+│   │   │   ├── utils
+│   │   │   │   ├── _gpu.py
+│   │   │   │   └── __init__.py
+│   │   │   └── _vector.py
+│   │   ├── __init__.py
+│   │   ├── __pycache__
+│   │   │   ├── __init__.cpython-311.pyc
+│   │   │   └── _utils.cpython-311.pyc
+│   │   ├── sklearn
+│   │   │   ├── __init__.py
+│   │   │   ├── _np_vec.py
+│   │   │   ├── __pycache__
+│   │   │   │   ├── __init__.cpython-311.pyc
+│   │   │   │   ├── _np_vec.cpython-311.pyc
+│   │   │   │   └── _sgd.cpython-311.pyc
+│   │   │   └── _sgd.py
+│   │   ├── tensorflow
+│   │   │   ├── __init__.py
+│   │   │   ├── _model.py
+│   │   │   ├── _optim.py
+│   │   │   ├── __pycache__
+│   │   │   │   ├── __init__.cpython-311.pyc
+│   │   │   │   ├── _model.cpython-311.pyc
+│   │   │   │   ├── _optim.cpython-311.pyc
+│   │   │   │   └── _vector.cpython-311.pyc
+│   │   │   ├── utils
+│   │   │   │   ├── _gpu.py
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── _loss.py
+│   │   │   │   ├── __pycache__
+│   │   │   │   │   ├── _gpu.cpython-311.pyc
+│   │   │   │   │   ├── __init__.cpython-311.pyc
+│   │   │   │   │   ├── _loss.cpython-311.pyc
+│   │   │   │   │   └── _slices.cpython-311.pyc
+│   │   │   │   └── _slices.py
+│   │   │   └── _vector.py
+│   │   ├── torch
+│   │   │   ├── __init__.py
+│   │   │   ├── _model.py
+│   │   │   ├── _optim.py
+│   │   │   ├── _samplewise
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── shared.py
+│   │   │   │   └── torchfunc.py
+│   │   │   ├── utils
+│   │   │   │   ├── _gpu.py
+│   │   │   │   └── __init__.py
+│   │   │   └── _vector.py
+│   │   └── _utils.py
+│   ├── optimizer
+│   │   ├── _base.py
+│   │   ├── __init__.py
+│   │   ├── modules
+│   │   │   ├── _adaptive.py
+│   │   │   ├── _api.py
+│   │   │   ├── _clipping.py
+│   │   │   ├── __init__.py
+│   │   │   ├── _momentum.py
+│   │   │   ├── _noise.py
+│   │   │   ├── __pycache__
+│   │   │   │   ├── _adaptive.cpython-311.pyc
+│   │   │   │   ├── _api.cpython-311.pyc
+│   │   │   │   ├── _clipping.cpython-311.pyc
+│   │   │   │   ├── __init__.cpython-311.pyc
+│   │   │   │   ├── _momentum.cpython-311.pyc
+│   │   │   │   ├── _noise.cpython-311.pyc
+│   │   │   │   └── _scaffold.cpython-311.pyc
+│   │   │   └── _scaffold.py
+│   │   ├── __pycache__
+│   │   │   ├── _base.cpython-311.pyc
+│   │   │   ├── __init__.cpython-311.pyc
+│   │   │   └── _utils.cpython-311.pyc
+│   │   ├── regularizers
+│   │   │   ├── _api.py
+│   │   │   ├── _base.py
+│   │   │   ├── __init__.py
+│   │   │   └── __pycache__
+│   │   │       ├── _api.cpython-311.pyc
+│   │   │       ├── _base.cpython-311.pyc
+│   │   │       └── __init__.cpython-311.pyc
+│   │   ├── schedulers
+│   │   │   ├── _api.py
+│   │   │   ├── _cosine.py
+│   │   │   ├── _cyclic.py
+│   │   │   ├── _decay.py
+│   │   │   ├── __init__.py
+│   │   │   ├── __pycache__
+│   │   │   │   ├── _api.cpython-311.pyc
+│   │   │   │   ├── _cosine.cpython-311.pyc
+│   │   │   │   ├── _cyclic.cpython-311.pyc
+│   │   │   │   ├── _decay.cpython-311.pyc
+│   │   │   │   ├── __init__.cpython-311.pyc
+│   │   │   │   └── _warmup.cpython-311.pyc
+│   │   │   └── _warmup.py
+│   │   └── _utils.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-310.pyc
+│   │   ├── __init__.cpython-311.pyc
+│   │   ├── typing.cpython-311.pyc
+│   │   └── version.cpython-311.pyc
+│   ├── py.typed
+│   ├── quickrun
+│   │   ├── _config.py
+│   │   ├── __init__.py
+│   │   ├── _parser.py
+│   │   ├── __pycache__
+│   │   │   ├── _config.cpython-311.pyc
+│   │   │   ├── __init__.cpython-311.pyc
+│   │   │   ├── _parser.cpython-311.pyc
+│   │   │   └── _run.cpython-311.pyc
+│   │   └── _run.py
+│   ├── secagg
+│   │   ├── api
+│   │   │   ├── _aggregate.py
+│   │   │   ├── _decrypt.py
+│   │   │   ├── _encrypt.py
+│   │   │   ├── __init__.py
+│   │   │   ├── __pycache__
+│   │   │   │   ├── _aggregate.cpython-311.pyc
+│   │   │   │   ├── _decrypt.cpython-311.pyc
+│   │   │   │   ├── _encrypt.cpython-311.pyc
+│   │   │   │   ├── __init__.cpython-311.pyc
+│   │   │   │   └── _setup.cpython-311.pyc
+│   │   │   └── _setup.py
+│   │   ├── __init__.py
+│   │   ├── joye_libert
+│   │   │   ├── _aggregate.py
+│   │   │   ├── _decrypt.py
+│   │   │   ├── _encrypt.py
+│   │   │   ├── __init__.py
+│   │   │   ├── messages.py
+│   │   │   ├── _primitives.py
+│   │   │   ├── __pycache__
+│   │   │   │   ├── _aggregate.cpython-311.pyc
+│   │   │   │   ├── _decrypt.cpython-311.pyc
+│   │   │   │   ├── _encrypt.cpython-311.pyc
+│   │   │   │   ├── __init__.cpython-311.pyc
+│   │   │   │   ├── messages.cpython-311.pyc
+│   │   │   │   ├── _primitives.cpython-311.pyc
+│   │   │   │   └── _setup.cpython-311.pyc
+│   │   │   └── _setup.py
+│   │   ├── masking
+│   │   │   ├── _aggregate.py
+│   │   │   ├── _decrypt.py
+│   │   │   ├── _encrypt.py
+│   │   │   ├── __init__.py
+│   │   │   ├── messages.py
+│   │   │   ├── __pycache__
+│   │   │   │   ├── _aggregate.cpython-311.pyc
+│   │   │   │   ├── _decrypt.cpython-311.pyc
+│   │   │   │   ├── _encrypt.cpython-311.pyc
+│   │   │   │   ├── __init__.cpython-311.pyc
+│   │   │   │   ├── messages.cpython-311.pyc
+│   │   │   │   └── _setup.cpython-311.pyc
+│   │   │   └── _setup.py
+│   │   ├── messaging.py
+│   │   ├── __pycache__
+│   │   │   ├── __init__.cpython-311.pyc
+│   │   │   ├── messaging.cpython-311.pyc
+│   │   │   └── _setup.cpython-311.pyc
+│   │   ├── _setup.py
+│   │   ├── shamir
+│   │   │   ├── __init__.py
+│   │   │   ├── __pycache__
+│   │   │   │   ├── __init__.cpython-311.pyc
+│   │   │   │   └── _shamir.cpython-311.pyc
+│   │   │   └── _shamir.py
+│   │   ├── utils
+│   │   │   ├── _ed25519.py
+│   │   │   ├── __init__.py
+│   │   │   ├── _numpy.py
+│   │   │   ├── _prime.py
+│   │   │   ├── __pycache__
+│   │   │   │   ├── _ed25519.cpython-311.pyc
+│   │   │   │   ├── __init__.cpython-311.pyc
+│   │   │   │   ├── _numpy.cpython-311.pyc
+│   │   │   │   ├── _prime.cpython-311.pyc
+│   │   │   │   └── _quantize.cpython-311.pyc
+│   │   │   └── _quantize.py
+│   │   └── x3dh
+│   │       ├── __init__.py
+│   │       ├── messages.py
+│   │       ├── __pycache__
+│   │       │   ├── __init__.cpython-311.pyc
+│   │       │   ├── messages.cpython-311.pyc
+│   │       │   ├── _setup.cpython-311.pyc
+│   │       │   └── _x3dh.cpython-311.pyc
+│   │       ├── _setup.py
+│   │       └── _x3dh.py
+│   ├── test_utils
+│   │   ├── _argparse.py
+│   │   ├── _assertions.py
+│   │   ├── _client_sampler.py
+│   │   ├── _convert.py
+│   │   ├── _gen_ssl.py
+│   │   ├── _imports.py
+│   │   ├── __init__.py
+│   │   ├── _network.py
+│   │   ├── __pycache__
+│   │   │   ├── _argparse.cpython-311.pyc
+│   │   │   ├── _assertions.cpython-311.pyc
+│   │   │   ├── _client_sampler.cpython-311.pyc
+│   │   │   ├── _convert.cpython-311.pyc
+│   │   │   ├── _gen_ssl.cpython-311.pyc
+│   │   │   ├── _imports.cpython-311.pyc
+│   │   │   ├── __init__.cpython-311.pyc
+│   │   │   ├── _network.cpython-311.pyc
+│   │   │   ├── _secagg.cpython-311.pyc
+│   │   │   └── _vectors.cpython-311.pyc
+│   │   ├── _secagg.py
+│   │   └── _vectors.py
+│   ├── training
+│   │   ├── _constraints.py
+│   │   ├── dp
+│   │   │   ├── __init__.py
+│   │   │   └── _manager.py
+│   │   ├── __init__.py
+│   │   ├── _manager.py
+│   │   └── __pycache__
+│   │       ├── _constraints.cpython-311.pyc
+│   │       ├── __init__.cpython-311.pyc
+│   │       └── _manager.cpython-311.pyc
+│   ├── typing.py
+│   ├── utils
+│   │   ├── _aggregate.py
+│   │   ├── _dataclass.py
+│   │   ├── _device_policy.py
+│   │   ├── __init__.py
+│   │   ├── _json.py
+│   │   ├── _logging.py
+│   │   ├── _multiprocess.py
+│   │   ├── _numpy.py
+│   │   ├── __pycache__
+│   │   │   ├── _aggregate.cpython-311.pyc
+│   │   │   ├── _dataclass.cpython-311.pyc
+│   │   │   ├── _device_policy.cpython-311.pyc
+│   │   │   ├── __init__.cpython-311.pyc
+│   │   │   ├── _json.cpython-311.pyc
+│   │   │   ├── _logging.cpython-311.pyc
+│   │   │   ├── _multiprocess.cpython-311.pyc
+│   │   │   ├── _numpy.cpython-311.pyc
+│   │   │   ├── _register.cpython-311.pyc
+│   │   │   ├── _serialize.cpython-311.pyc
+│   │   │   └── _toml_config.cpython-311.pyc
+│   │   ├── _register.py
+│   │   ├── _serialize.py
+│   │   └── _toml_config.py
+│   └── version.py
+├── declearn.egg-info
+│   ├── dependency_links.txt
+│   ├── entry_points.txt
+│   ├── PKG-INFO
+│   ├── requires.txt
+│   ├── SOURCES.txt
+│   └── top_level.txt
+├── docs
+│   ├── api-reference
+│   │   └── index.md
+│   ├── devs-guide
+│   │   ├── contribute.md
+│   │   ├── docs-build.md
+│   │   ├── docs-style.md
+│   │   ├── index.md
+│   │   ├── SUMMARY.md
+│   │   └── tests.md
+│   ├── index.md
+│   ├── quickstart.md
+│   ├── release-notes
+│   │   ├── SUMMARY.md
+│   │   ├── v2.0.0.md
+│   │   ├── v2.0.1.md
+│   │   ├── v2.0.2.md
+│   │   ├── v2.0.3.md
+│   │   ├── v2.1.0.md
+│   │   ├── v2.1.1.md
+│   │   ├── v2.2.0.md
+│   │   ├── v2.2.1.md
+│   │   ├── v2.2.2.md
+│   │   ├── v2.3.0.md
+│   │   ├── v2.3.1.md
+│   │   ├── v2.3.2.md
+│   │   ├── v2.4.0.md
+│   │   ├── v2.4.1.md
+│   │   ├── v2.5.0.md
+│   │   ├── v2.5.1.md
+│   │   ├── v2.6.0.md
+│   │   ├── v2.6.1.md
+│   │   ├── v2.7.0.md
+│   │   └── v2.8.0.md
+│   ├── setup.md
+│   ├── SUMMARY.md
+│   └── user-guide
+│       ├── client_sampling.md
+│       ├── fairness.md
+│       ├── fl_process.md
+│       ├── index.md
+│       ├── local_dp.md
+│       ├── optimizer.md
+│       ├── package.md
+│       ├── secagg.md
+│       ├── SUMMARY.md
+│       └── usage.md
+├── examples
+│   ├── adding_rmsprop
+│   │   └── readme.md
+│   ├── flamby
+│   │   ├── generate_ssl.py
+│   │   ├── metric.py
+│   │   ├── readme.md
+│   │   ├── run_client.py
+│   │   ├── run_demo.py
+│   │   └── run_server.py
+│   ├── heart-uci
+│   │   ├── client.py
+│   │   ├── data.py
+│   │   ├── gen_ssl.py
+│   │   ├── readme.md
+│   │   ├── run.py
+│   │   └── server.py
+│   ├── mnist
+│   │   ├── generate_ssl.py
+│   │   ├── prepare_data.py
+│   │   ├── readme.md
+│   │   ├── run_client.py
+│   │   ├── run_demo.py
+│   │   └── run_server.py
+│   ├── mnist_g5k
+│   │   ├── generate_ssl.py
+│   │   ├── prepare_data.py
+│   │   ├── readme.md
+│   │   ├── run_client.py
+│   │   ├── run_grid5k.py
+│   │   └── run_server.py
+│   ├── mnist_quickrun
+│   │   ├── config.toml
+│   │   ├── data_iid
+│   │   │   ├── client_0
+│   │   │   │   ├── train_data.npy
+│   │   │   │   ├── train_target.npy
+│   │   │   │   ├── valid_data.npy
+│   │   │   │   └── valid_target.npy
+│   │   │   ├── client_1
+│   │   │   │   ├── train_data.npy
+│   │   │   │   ├── train_target.npy
+│   │   │   │   ├── valid_data.npy
+│   │   │   │   └── valid_target.npy
+│   │   │   └── client_2
+│   │   │       ├── train_data.npy
+│   │   │       ├── train_target.npy
+│   │   │       ├── valid_data.npy
+│   │   │       └── valid_target.npy
+│   │   ├── mnist.ipynb
+│   │   ├── model.py
+│   │   ├── model_torch.py
+│   │   ├── __pycache__
+│   │   │   ├── model.cpython-310.pyc
+│   │   │   └── model.cpython-311.pyc
+│   │   ├── readme.md
+│   │   ├── result_26-04-14_10-09
+│   │   │   ├── client_0
+│   │   │   │   ├── logs.txt
+│   │   │   │   ├── metrics.csv
+│   │   │   │   ├── metrics.json
+│   │   │   │   ├── model_config.json
+│   │   │   │   ├── model_state_26-04-14_10-09-26.json
+│   │   │   │   ├── model_state_26-04-14_10-09-39.json
+│   │   │   │   ├── model_state_26-04-14_10-09-51.json
+│   │   │   │   ├── optimizer_config.json
+│   │   │   │   ├── optimizer_state_26-04-14_10-09-26.json
+│   │   │   │   ├── optimizer_state_26-04-14_10-09-39.json
+│   │   │   │   ├── optimizer_state_26-04-14_10-09-51.json
+│   │   │   │   └── training_losses.json
+│   │   │   ├── client_1
+│   │   │   │   ├── logs.txt
+│   │   │   │   ├── metrics.csv
+│   │   │   │   ├── metrics.json
+│   │   │   │   ├── model_config.json
+│   │   │   │   ├── model_state_26-04-14_10-09-26.json
+│   │   │   │   ├── model_state_26-04-14_10-09-39.json
+│   │   │   │   ├── model_state_26-04-14_10-09-51.json
+│   │   │   │   ├── optimizer_config.json
+│   │   │   │   ├── optimizer_state_26-04-14_10-09-26.json
+│   │   │   │   ├── optimizer_state_26-04-14_10-09-39.json
+│   │   │   │   ├── optimizer_state_26-04-14_10-09-51.json
+│   │   │   │   └── training_losses.json
+│   │   │   ├── client_2
+│   │   │   │   ├── logs.txt
+│   │   │   │   ├── metrics.csv
+│   │   │   │   ├── metrics.json
+│   │   │   │   ├── model_config.json
+│   │   │   │   ├── model_state_26-04-14_10-09-26.json
+│   │   │   │   ├── model_state_26-04-14_10-09-38.json
+│   │   │   │   ├── model_state_26-04-14_10-09-50.json
+│   │   │   │   ├── optimizer_config.json
+│   │   │   │   ├── optimizer_state_26-04-14_10-09-26.json
+│   │   │   │   ├── optimizer_state_26-04-14_10-09-38.json
+│   │   │   │   ├── optimizer_state_26-04-14_10-09-50.json
+│   │   │   │   └── training_losses.json
+│   │   │   └── server
+│   │   │       ├── logger.txt
+│   │   │       ├── metrics_client_0.csv
+│   │   │       ├── metrics_client_0.json
+│   │   │       ├── metrics_client_1.csv
+│   │   │       ├── metrics_client_1.json
+│   │   │       ├── metrics_client_2.csv
+│   │   │       ├── metrics_client_2.json
+│   │   │       ├── metrics.csv
+│   │   │       ├── metrics.json
+│   │   │       ├── model_config.json
+│   │   │       ├── model_state_26-04-14_10-09-27.json
+│   │   │       ├── model_state_26-04-14_10-09-39.json
+│   │   │       ├── model_state_26-04-14_10-09-51.json
+│   │   │       ├── optimizer_config.json
+│   │   │       ├── optimizer_state_26-04-14_10-09-27.json
+│   │   │       ├── optimizer_state_26-04-14_10-09-39.json
+│   │   │       └── optimizer_state_26-04-14_10-09-51.json
+│   │   ├── result_26-04-14_10-29
+│   │   │   ├── client_0
+│   │   │   │   └── logs.txt
+│   │   │   ├── client_1
+│   │   │   │   └── logs.txt
+│   │   │   ├── client_2
+│   │   │   │   └── logs.txt
+│   │   │   └── server
+│   │   │       └── logger.txt
+│   │   ├── result_26-04-14_10-31
+│   │   │   ├── client_0
+│   │   │   │   ├── logs.txt
+│   │   │   │   ├── metrics.csv
+│   │   │   │   ├── metrics.json
+│   │   │   │   ├── model_config.json
+│   │   │   │   ├── model_state_26-04-14_10-31-16.json
+│   │   │   │   ├── model_state_26-04-14_10-31-33.json
+│   │   │   │   ├── model_state_26-04-14_10-31-49.json
+│   │   │   │   ├── model_state_26-04-14_10-32-05.json
+│   │   │   │   ├── model_state_26-04-14_10-32-24.json
+│   │   │   │   ├── model_state_26-04-14_10-32-41.json
+│   │   │   │   ├── model_state_26-04-14_10-33-00.json
+│   │   │   │   ├── model_state_26-04-14_10-33-21.json
+│   │   │   │   ├── model_state_26-04-14_10-33-38.json
+│   │   │   │   ├── model_state_26-04-14_10-33-55.json
+│   │   │   │   ├── model_state_26-04-14_10-34-13.json
+│   │   │   │   ├── model_state_best.json
+│   │   │   │   ├── optimizer_config.json
+│   │   │   │   ├── optimizer_state_26-04-14_10-31-16.json
+│   │   │   │   ├── optimizer_state_26-04-14_10-31-33.json
+│   │   │   │   ├── optimizer_state_26-04-14_10-31-49.json
+│   │   │   │   ├── optimizer_state_26-04-14_10-32-05.json
+│   │   │   │   ├── optimizer_state_26-04-14_10-32-24.json
+│   │   │   │   ├── optimizer_state_26-04-14_10-32-41.json
+│   │   │   │   ├── optimizer_state_26-04-14_10-33-00.json
+│   │   │   │   ├── optimizer_state_26-04-14_10-33-21.json
+│   │   │   │   ├── optimizer_state_26-04-14_10-33-38.json
+│   │   │   │   ├── optimizer_state_26-04-14_10-33-55.json
+│   │   │   │   ├── optimizer_state_26-04-14_10-34-13.json
+│   │   │   │   └── training_losses.json
+│   │   │   ├── client_1
+│   │   │   │   ├── logs.txt
+│   │   │   │   ├── metrics.csv
+│   │   │   │   ├── metrics.json
+│   │   │   │   ├── model_config.json
+│   │   │   │   ├── model_state_26-04-14_10-31-16.json
+│   │   │   │   ├── model_state_26-04-14_10-31-34.json
+│   │   │   │   ├── model_state_26-04-14_10-31-50.json
+│   │   │   │   ├── model_state_26-04-14_10-32-06.json
+│   │   │   │   ├── model_state_26-04-14_10-32-25.json
+│   │   │   │   ├── model_state_26-04-14_10-32-42.json
+│   │   │   │   ├── model_state_26-04-14_10-33-02.json
+│   │   │   │   ├── model_state_26-04-14_10-33-22.json
+│   │   │   │   ├── model_state_26-04-14_10-33-39.json
+│   │   │   │   ├── model_state_26-04-14_10-33-56.json
+│   │   │   │   ├── model_state_26-04-14_10-34-14.json
+│   │   │   │   ├── model_state_best.json
+│   │   │   │   ├── optimizer_config.json
+│   │   │   │   ├── optimizer_state_26-04-14_10-31-16.json
+│   │   │   │   ├── optimizer_state_26-04-14_10-31-34.json
+│   │   │   │   ├── optimizer_state_26-04-14_10-31-50.json
+│   │   │   │   ├── optimizer_state_26-04-14_10-32-06.json
+│   │   │   │   ├── optimizer_state_26-04-14_10-32-25.json
+│   │   │   │   ├── optimizer_state_26-04-14_10-32-42.json
+│   │   │   │   ├── optimizer_state_26-04-14_10-33-02.json
+│   │   │   │   ├── optimizer_state_26-04-14_10-33-22.json
+│   │   │   │   ├── optimizer_state_26-04-14_10-33-39.json
+│   │   │   │   ├── optimizer_state_26-04-14_10-33-56.json
+│   │   │   │   ├── optimizer_state_26-04-14_10-34-14.json
+│   │   │   │   └── training_losses.json
+│   │   │   ├── client_2
+│   │   │   │   ├── logs.txt
+│   │   │   │   ├── metrics.csv
+│   │   │   │   ├── metrics.json
+│   │   │   │   ├── model_config.json
+│   │   │   │   ├── model_state_26-04-14_10-31-16.json
+│   │   │   │   ├── model_state_26-04-14_10-31-34.json
+│   │   │   │   ├── model_state_26-04-14_10-31-50.json
+│   │   │   │   ├── model_state_26-04-14_10-32-06.json
+│   │   │   │   ├── model_state_26-04-14_10-32-25.json
+│   │   │   │   ├── model_state_26-04-14_10-32-42.json
+│   │   │   │   ├── model_state_26-04-14_10-33-01.json
+│   │   │   │   ├── model_state_26-04-14_10-33-21.json
+│   │   │   │   ├── model_state_26-04-14_10-33-39.json
+│   │   │   │   ├── model_state_26-04-14_10-33-56.json
+│   │   │   │   ├── model_state_26-04-14_10-34-13.json
+│   │   │   │   ├── model_state_best.json
+│   │   │   │   ├── optimizer_config.json
+│   │   │   │   ├── optimizer_state_26-04-14_10-31-16.json
+│   │   │   │   ├── optimizer_state_26-04-14_10-31-34.json
+│   │   │   │   ├── optimizer_state_26-04-14_10-31-50.json
+│   │   │   │   ├── optimizer_state_26-04-14_10-32-06.json
+│   │   │   │   ├── optimizer_state_26-04-14_10-32-25.json
+│   │   │   │   ├── optimizer_state_26-04-14_10-32-42.json
+│   │   │   │   ├── optimizer_state_26-04-14_10-33-01.json
+│   │   │   │   ├── optimizer_state_26-04-14_10-33-21.json
+│   │   │   │   ├── optimizer_state_26-04-14_10-33-39.json
+│   │   │   │   ├── optimizer_state_26-04-14_10-33-56.json
+│   │   │   │   ├── optimizer_state_26-04-14_10-34-13.json
+│   │   │   │   └── training_losses.json
+│   │   │   └── server
+│   │   │       ├── logger.txt
+│   │   │       ├── metrics_client_0.csv
+│   │   │       ├── metrics_client_0.json
+│   │   │       ├── metrics_client_1.csv
+│   │   │       ├── metrics_client_1.json
+│   │   │       ├── metrics_client_2.csv
+│   │   │       ├── metrics_client_2.json
+│   │   │       ├── metrics.csv
+│   │   │       ├── metrics.json
+│   │   │       ├── model_config.json
+│   │   │       ├── model_state_26-04-14_10-31-17.json
+│   │   │       ├── model_state_26-04-14_10-31-34.json
+│   │   │       ├── model_state_26-04-14_10-31-50.json
+│   │   │       ├── model_state_26-04-14_10-32-06.json
+│   │   │       ├── model_state_26-04-14_10-32-25.json
+│   │   │       ├── model_state_26-04-14_10-32-42.json
+│   │   │       ├── model_state_26-04-14_10-33-02.json
+│   │   │       ├── model_state_26-04-14_10-33-22.json
+│   │   │       ├── model_state_26-04-14_10-33-39.json
+│   │   │       ├── model_state_26-04-14_10-33-56.json
+│   │   │       ├── model_state_26-04-14_10-34-14.json
+│   │   │       ├── model_state_best.json
+│   │   │       ├── optimizer_config.json
+│   │   │       ├── optimizer_state_26-04-14_10-31-17.json
+│   │   │       ├── optimizer_state_26-04-14_10-31-34.json
+│   │   │       ├── optimizer_state_26-04-14_10-31-50.json
+│   │   │       ├── optimizer_state_26-04-14_10-32-06.json
+│   │   │       ├── optimizer_state_26-04-14_10-32-25.json
+│   │   │       ├── optimizer_state_26-04-14_10-32-42.json
+│   │   │       ├── optimizer_state_26-04-14_10-33-02.json
+│   │   │       ├── optimizer_state_26-04-14_10-33-22.json
+│   │   │       ├── optimizer_state_26-04-14_10-33-39.json
+│   │   │       ├── optimizer_state_26-04-14_10-33-56.json
+│   │   │       └── optimizer_state_26-04-14_10-34-14.json
+│   │   ├── result_26-04-14_10-51
+│   │   │   ├── client_0
+│   │   │   │   └── logs.txt
+│   │   │   ├── client_1
+│   │   │   │   └── logs.txt
+│   │   │   ├── client_2
+│   │   │   │   └── logs.txt
+│   │   │   └── server
+│   │   │       └── logs.txt
+│   │   ├── result_26-04-14_10-53
+│   │   │   ├── client_0
+│   │   │   │   └── logs.txt
+│   │   │   ├── client_1
+│   │   │   │   └── logs.txt
+│   │   │   ├── client_2
+│   │   │   │   └── logs.txt
+│   │   │   └── server
+│   │   │       └── logs.txt
+│   │   └── result_26-04-14_10-56
+│   │       ├── client_0
+│   │       │   ├── logs.txt
+│   │       │   ├── metrics.csv
+│   │       │   ├── metrics.json
+│   │       │   ├── model_config.json
+│   │       │   ├── model_state_26-04-14_10-56-26.json
+│   │       │   ├── model_state_26-04-14_10-56-45.json
+│   │       │   ├── model_state_26-04-14_10-57-02.json
+│   │       │   ├── model_state_26-04-14_10-57-19.json
+│   │       │   ├── model_state_26-04-14_10-57-37.json
+│   │       │   ├── model_state_26-04-14_10-57-55.json
+│   │       │   ├── model_state_26-04-14_10-58-13.json
+│   │       │   ├── model_state_26-04-14_10-58-31.json
+│   │       │   ├── model_state_26-04-14_10-58-48.json
+│   │       │   ├── model_state_26-04-14_10-59-06.json
+│   │       │   ├── model_state_26-04-14_10-59-25.json
+│   │       │   ├── model_state_best.json
+│   │       │   ├── optimizer_config.json
+│   │       │   ├── optimizer_state_26-04-14_10-56-26.json
+│   │       │   ├── optimizer_state_26-04-14_10-56-45.json
+│   │       │   ├── optimizer_state_26-04-14_10-57-02.json
+│   │       │   ├── optimizer_state_26-04-14_10-57-19.json
+│   │       │   ├── optimizer_state_26-04-14_10-57-37.json
+│   │       │   ├── optimizer_state_26-04-14_10-57-55.json
+│   │       │   ├── optimizer_state_26-04-14_10-58-13.json
+│   │       │   ├── optimizer_state_26-04-14_10-58-31.json
+│   │       │   ├── optimizer_state_26-04-14_10-58-48.json
+│   │       │   ├── optimizer_state_26-04-14_10-59-06.json
+│   │       │   ├── optimizer_state_26-04-14_10-59-25.json
+│   │       │   └── training_losses.json
+│   │       ├── client_1
+│   │       │   ├── logs.txt
+│   │       │   ├── metrics.csv
+│   │       │   ├── metrics.json
+│   │       │   ├── model_config.json
+│   │       │   ├── model_state_26-04-14_10-56-26.json
+│   │       │   ├── model_state_26-04-14_10-56-47.json
+│   │       │   ├── model_state_26-04-14_10-57-03.json
+│   │       │   ├── model_state_26-04-14_10-57-20.json
+│   │       │   ├── model_state_26-04-14_10-57-38.json
+│   │       │   ├── model_state_26-04-14_10-57-56.json
+│   │       │   ├── model_state_26-04-14_10-58-14.json
+│   │       │   ├── model_state_26-04-14_10-58-32.json
+│   │       │   ├── model_state_26-04-14_10-58-49.json
+│   │       │   ├── model_state_26-04-14_10-59-07.json
+│   │       │   ├── model_state_26-04-14_10-59-26.json
+│   │       │   ├── model_state_best.json
+│   │       │   ├── optimizer_config.json
+│   │       │   ├── optimizer_state_26-04-14_10-56-26.json
+│   │       │   ├── optimizer_state_26-04-14_10-56-47.json
+│   │       │   ├── optimizer_state_26-04-14_10-57-03.json
+│   │       │   ├── optimizer_state_26-04-14_10-57-20.json
+│   │       │   ├── optimizer_state_26-04-14_10-57-38.json
+│   │       │   ├── optimizer_state_26-04-14_10-57-56.json
+│   │       │   ├── optimizer_state_26-04-14_10-58-14.json
+│   │       │   ├── optimizer_state_26-04-14_10-58-32.json
+│   │       │   ├── optimizer_state_26-04-14_10-58-49.json
+│   │       │   ├── optimizer_state_26-04-14_10-59-07.json
+│   │       │   ├── optimizer_state_26-04-14_10-59-26.json
+│   │       │   └── training_losses.json
+│   │       ├── client_2
+│   │       │   ├── logs.txt
+│   │       │   ├── metrics.csv
+│   │       │   ├── metrics.json
+│   │       │   ├── model_config.json
+│   │       │   ├── model_state_26-04-14_10-56-26.json
+│   │       │   ├── model_state_26-04-14_10-56-47.json
+│   │       │   ├── model_state_26-04-14_10-57-02.json
+│   │       │   ├── model_state_26-04-14_10-57-20.json
+│   │       │   ├── model_state_26-04-14_10-57-38.json
+│   │       │   ├── model_state_26-04-14_10-57-55.json
+│   │       │   ├── model_state_26-04-14_10-58-13.json
+│   │       │   ├── model_state_26-04-14_10-58-31.json
+│   │       │   ├── model_state_26-04-14_10-58-49.json
+│   │       │   ├── model_state_26-04-14_10-59-07.json
+│   │       │   ├── model_state_26-04-14_10-59-25.json
+│   │       │   ├── model_state_best.json
+│   │       │   ├── optimizer_config.json
+│   │       │   ├── optimizer_state_26-04-14_10-56-26.json
+│   │       │   ├── optimizer_state_26-04-14_10-56-47.json
+│   │       │   ├── optimizer_state_26-04-14_10-57-02.json
+│   │       │   ├── optimizer_state_26-04-14_10-57-20.json
+│   │       │   ├── optimizer_state_26-04-14_10-57-38.json
+│   │       │   ├── optimizer_state_26-04-14_10-57-55.json
+│   │       │   ├── optimizer_state_26-04-14_10-58-13.json
+│   │       │   ├── optimizer_state_26-04-14_10-58-31.json
+│   │       │   ├── optimizer_state_26-04-14_10-58-49.json
+│   │       │   ├── optimizer_state_26-04-14_10-59-07.json
+│   │       │   ├── optimizer_state_26-04-14_10-59-25.json
+│   │       │   └── training_losses.json
+│   │       └── server
+│   │           ├── logs.txt
+│   │           ├── metrics_client_0.csv
+│   │           ├── metrics_client_0.json
+│   │           ├── metrics_client_1.csv
+│   │           ├── metrics_client_1.json
+│   │           ├── metrics_client_2.csv
+│   │           ├── metrics_client_2.json
+│   │           ├── metrics.csv
+│   │           ├── metrics.json
+│   │           ├── model_config.json
+│   │           ├── model_state_26-04-14_10-56-27.json
+│   │           ├── model_state_26-04-14_10-56-47.json
+│   │           ├── model_state_26-04-14_10-57-03.json
+│   │           ├── model_state_26-04-14_10-57-20.json
+│   │           ├── model_state_26-04-14_10-57-38.json
+│   │           ├── model_state_26-04-14_10-57-56.json
+│   │           ├── model_state_26-04-14_10-58-14.json
+│   │           ├── model_state_26-04-14_10-58-32.json
+│   │           ├── model_state_26-04-14_10-58-49.json
+│   │           ├── model_state_26-04-14_10-59-07.json
+│   │           ├── model_state_26-04-14_10-59-26.json
+│   │           ├── model_state_best.json
+│   │           ├── optimizer_config.json
+│   │           ├── optimizer_state_26-04-14_10-56-27.json
+│   │           ├── optimizer_state_26-04-14_10-56-47.json
+│   │           ├── optimizer_state_26-04-14_10-57-03.json
+│   │           ├── optimizer_state_26-04-14_10-57-20.json
+│   │           ├── optimizer_state_26-04-14_10-57-38.json
+│   │           ├── optimizer_state_26-04-14_10-57-56.json
+│   │           ├── optimizer_state_26-04-14_10-58-14.json
+│   │           ├── optimizer_state_26-04-14_10-58-32.json
+│   │           ├── optimizer_state_26-04-14_10-58-49.json
+│   │           ├── optimizer_state_26-04-14_10-59-07.json
+│   │           └── optimizer_state_26-04-14_10-59-26.json
+│   ├── nlp
+│   │   ├── dataset.py
+│   │   ├── generate_ssl.py
+│   │   ├── model.py
+│   │   ├── prepare_data.py
+│   │   ├── readme.md
+│   │   ├── run_client.py
+│   │   ├── run_demo.py
+│   │   └── run_server.py
+│   └── readme.md
+├── LICENSE
+├── mkdocs.yml
+├── profiling
+│   ├── docs.md
+│   ├── output.prof
+│   ├── profile_run.py
+│   └── tree.txt
+├── pyproject.toml
+├── README.md
+├── scripts
+│   ├── gen_docs.py
+│   └── run_tests.sh
+├── test
+│   ├── aggregator
+│   │   └── test_aggregator.py
+│   ├── client_sampler
+│   │   ├── conftest.py
+│   │   ├── test_criterion.py
+│   │   ├── test_from_specs.py
+│   │   └── test_sampler.py
+│   ├── communication
+│   │   ├── backend
+│   │   │   ├── test_actions.py
+│   │   │   └── test_messages_handler.py
+│   │   ├── conftest.py
+│   │   ├── test_exchanges.py
+│   │   ├── test_grpc.py
+│   │   ├── test_network_server.py
+│   │   └── test_utils.py
+│   ├── conftest.py
+│   ├── data_info
+│   │   ├── test_classes_field.py
+│   │   ├── test_data_info_utils.py
+│   │   ├── test_datatype_field.py
+│   │   ├── test_nbsamples_field.py
+│   │   └── test_shape_field.py
+│   ├── dataset
+│   │   ├── dataset_testbase.py
+│   │   ├── test_dataset_utils.py
+│   │   ├── test_examples.py
+│   │   ├── test_inmemory.py
+│   │   ├── test_split_multi_classif.py
+│   │   ├── test_tensorflow_dataset.py
+│   │   └── test_torch_dataset.py
+│   ├── fairness
+│   │   ├── algorithms
+│   │   │   ├── test_fairbatch_dataset.py
+│   │   │   ├── test_fairbatch_sampling.py
+│   │   │   ├── test_fairfed_aggregator.py
+│   │   │   ├── test_fairfed_computer.py
+│   │   │   └── test_fairgrad_weights_controller.py
+│   │   ├── controllers
+│   │   │   ├── fairness_controllers_testing.py
+│   │   │   ├── test_fairbatch_controllers.py
+│   │   │   ├── test_fairfed_controllers.py
+│   │   │   ├── test_fairgrad_controllers.py
+│   │   │   └── test_monitor_controllers.py
+│   │   ├── test_accuracy_computer.py
+│   │   ├── test_fairness_functions.py
+│   │   └── test_fairness_inmemory_dataset.py
+│   ├── functional
+│   │   ├── conftest.py
+│   │   ├── test_main.py
+│   │   ├── test_quickrun.py
+│   │   ├── test_toy_clf_fairness.py
+│   │   ├── test_toy_clf_secagg.py
+│   │   ├── test_toy_clisampling.py
+│   │   └── test_toy_reg.py
+│   ├── main
+│   │   ├── test_checkpoint.py
+│   │   ├── test_config_optim.py
+│   │   ├── test_data_info.py
+│   │   ├── test_early_stopping.py
+│   │   ├── test_main_client.py
+│   │   └── test_main_server.py
+│   ├── metrics
+│   │   ├── metric_testing.py
+│   │   ├── test_binary_apr.py
+│   │   ├── test_binary_roc.py
+│   │   ├── test_mae_mse.py
+│   │   ├── test_metricset.py
+│   │   ├── test_multi_apr.py
+│   │   └── test_rsquared.py
+│   ├── model
+│   │   ├── model_testing.py
+│   │   ├── test_haiku_model.py
+│   │   ├── test_sksgd_model.py
+│   │   ├── test_tflow_model.py
+│   │   └── test_torch_model.py
+│   ├── optimizer
+│   │   ├── conftest.py
+│   │   ├── optim_testing.py
+│   │   ├── test_modules.py
+│   │   ├── test_noise.py
+│   │   ├── test_optimizer.py
+│   │   ├── test_regularizers.py
+│   │   ├── test_scaffold.py
+│   │   ├── test_schedulers.py
+│   │   ├── test_tflow_optim.py
+│   │   └── test_torch_optim.py
+│   ├── quickrun
+│   │   └── test_quickrun_utils.py
+│   ├── secagg
+│   │   ├── controllers
+│   │   │   ├── secagg_testing.py
+│   │   │   ├── test_joye_libert_controllers.py
+│   │   │   ├── test_joye_libert_primitives.py
+│   │   │   └── test_masking_controllers.py
+│   │   ├── setup
+│   │   │   ├── secagg_setup_testing.py
+│   │   │   ├── test_joye_libert_setup.py
+│   │   │   └── test_masking_setup.py
+│   │   ├── test_identity_keys.py
+│   │   ├── test_prime_utils.py
+│   │   ├── test_quantizer.py
+│   │   ├── test_shamir.py
+│   │   ├── test_x3dh.py
+│   │   └── test_x3dh_setup.py
+│   ├── training
+│   │   ├── test_train_manager_dp.py
+│   │   └── test_train_manager.py
+│   ├── utils
+│   │   ├── test_json.py
+│   │   ├── test_multiprocess.py
+│   │   ├── test_register.py
+│   │   ├── test_serialize.py
+│   │   └── test_toml.py
+│   └── vector
+│       ├── conftest.py
+│       ├── test_generic_vector.py
+│       ├── test_jaxnp_vector.py
+│       ├── test_numpy_vector.py
+│       ├── test_tflow_vector.py
+│       ├── test_torch_vector.py
+│       └── vector_testing.py
+├── tox.ini
+├── tree.txt
+└── uv.lock
+
+176 directories, 956 files
