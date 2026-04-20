@@ -70,29 +70,106 @@ extract profiling info for the benchmark
 
 
 
+##CHOIXS D'OUTIL
+PY-SPY  
+MEMRAY 
+
 
 ------------------------------------------------------------------------------------------CHECKPOINT-------------------------------------------------------------------------------------------------------------
 ##TASKS 
 --trying out tachyon 
---Getting familiar with each module of declearn code 
+--Getting familiar with each module of declearn code while preparing benchmarks
 --start documenting eveything you're doing to leave everything clear behind you (make sure its clean at the end of each checkpoint)
  
+###TRYING OUT TACHYON 
 
-### INFORMATION ABOUT Tachyon ###
+## INFORMATION ABOUT Tachyon 
 --async awareness can help track and differentiate between clients 
 --it supports both wall clock mode and cpu mode which is very very useful for declearn 
---
+
+##Challenges 
+--most of decLearn dependecies "does not have wheels for the alpha version" so the only thing i can do now is cross environnement profiling, and tachyon being a statistical profiler it needs speceifc pids which is really painful to do in different environnement and can't give really accurate results for now 
 
 ##Questions 
 --difference between normal and -e in the profiling context ?
+--the latest declearn in Pypi is 2.6.1 and the code in the repo is for the 2.8.0 from where should the profiling start 
+--combination of toml for benchmarks need some intuiton
+
+
+-->Conclusion waiting on this for now (till the next version is out)
+
+
+###Preparing the benchmakrs
+ 
+ the categories marc suggested : 
+ 
+1.FedAVG avec torch, sklearn, tensorflow, haiku
+	torch and tf done,
+	sklearn and haiku later(they require new models)
+
+#FedAVG torch avec régularisation (les 3 options, donc 3 expés)
+	Lasso(L1)-->alpha*sign(weights)
+	Ridge(L2)-->2*alpha*weights
+	fedprox-->alpha*(weights - ref_wgt) penalizes drift from the round-start weights
 	
 	
-	
+#FedAVG torch avec DP
+	check the configuration with someone..and watch out for some changes in batch sizes
+	the changes caused mismatch problems..copied the model file and did not work .. will fix later 
 
 	
+#FedAVG torch avec optim Scaffold.
+	done
+	
+#FedAVG torch avec SeccAgg et les deux façons: soit masking, soit joye-libert
+	the test exampl covers only the masking part 
+	
+#FedAVG torch avec fairness (les 3 variantes)
+	profile the test
 	
 	
+		
+##working on 
 	
+	#preapre les categories qui tourne deja
+	# utiliser test functional pour les categories qui sont comlique a faire avec le mnist quick run 
+	# comparer le mnist et le mnist quickrun voir la difference entre le asycnio et le multi processing 
+	#documntation (ameliorations?)
+	#asv benchmark for later
+	
+#combien de temps que le profiling rajoute par rapport au test normal (c'est important pour la ci) 
+	quelque resultat initiale pour l'exemple du mnist quickrun 
+	--- baseline ---
+  runs:   5
+  mean:   41.518s
+  median: 41.281s
+  stdev:  1.094s
+  min:    40.036s
+  max:    42.950s
+
+--- cprofile ---
+  runs:   5
+  mean:   52.901s
+  median: 52.703s
+  stdev:  3.130s
+  min:    49.128s
+  max:    57.569s
+
+--- pyspy ---
+  runs:   5
+  mean:   47.703s
+  median: 47.581s
+  stdev:  1.747s
+  min:    45.032s
+  max:    49.337s
+
+=== Overhead vs baseline ===
+  cprofile    absolute: +11.383s   relative:  +27.4%
+  pyspy       absolute:  +6.185s   relative:  +14.9%
+	
+
+
+
 	
 	
 	

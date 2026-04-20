@@ -34,6 +34,11 @@ profile.json
 speedscope.json
 *_speedscope.json
 *_flamegraph.html
+# Profiling benchmark data and results.
+profiling/data_iid/
+profiling/data_*/
+profiling/results/
+profiling/benchmarks/*/result_*/
 # Documentation rendered files.
 public/
 site/
